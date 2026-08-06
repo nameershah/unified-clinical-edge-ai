@@ -405,7 +405,7 @@ unified-clinical-edge-ai/
 Clone the repository and enter its directory:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/nameershah/unified-clinical-edge-ai.git
 cd unified-clinical-edge-ai
 ```
 
