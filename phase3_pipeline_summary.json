@@ -1,0 +1,20 @@
+{
+  "pipeline": "ResNet-18 INT8 \u2192 H.E.A.R.L. \u2192 Gemini RAG",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "total_samples": 20,
+  "approved": 20,
+  "blocked": 0,
+  "approval_rate": 1.0,
+  "hearl_config": {
+    "w1": 0.7,
+    "w2": 0.15,
+    "w3": 0.15,
+    "threshold": 0.38,
+    "confidence_floor": 0.6
+  },
+  "phase2_metrics": {
+    "overall_accuracy": 0.9223,
+    "approved_accuracy": 0.9759,
+    "macro_auc": 0.9861
+  }
+}
