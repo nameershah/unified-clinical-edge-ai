@@ -1,0 +1,28 @@
+{
+  "model": "ResNet-18 INT8 Dynamic Quantized",
+  "dataset": "PathMNIST",
+  "fp32_size_mb": 42.73,
+  "int8_size_mb": 42.71,
+  "size_reduction_pct": 0.0,
+  "fp32_latency_ms": 44093.27,
+  "int8_latency_ms": 43758.96,
+  "speedup": 1.01,
+  "overall_accuracy": 0.9223,
+  "approved_accuracy": 0.9759,
+  "macro_auc": 0.9861,
+  "hearl_config": {
+    "w1": 0.7,
+    "w2": 0.15,
+    "w3": 0.15,
+    "threshold": 0.5,
+    "confidence_floor": 0.6
+  },
+  "routing_summary": {
+    "total": 7180,
+    "approved": 6264,
+    "blocked": 916,
+    "approval_rate": 0.8724,
+    "mean_utility": 0.5196,
+    "std_utility": 0.0708
+  }
+}
