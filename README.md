@@ -34,7 +34,7 @@ Unified Clinical Edge AI investigates a different architecture:
 
 ```text
                   ┌─────────────────────────┐
-                  │   PathMNIST Tissue Patch │
+                  │  PathMNIST Tissue Patch │
                   └────────────┬────────────┘
                                │
                                ▼
@@ -46,7 +46,7 @@ Unified Clinical Edge AI investigates a different architecture:
                                ▼
                   ┌─────────────────────────┐
                   │ Probability Distribution│
-                  │      P(y | x)            │
+                  │      P(y | x)           │
                   └────────────┬────────────┘
                                │
                                ▼
@@ -292,19 +292,19 @@ The complete research direction can therefore be summarized as:
 
 ```text
 ┌────────────────────────────────────────────────────────────┐
-│                         PHASE 1                             │
+│                         PHASE 1                            │
 │                                                            │
-│  PathMNIST → ResNet-18 → Classification Baseline          │
+│  PathMNIST → ResNet-18 → Classification Baseline           │
 │                                                            │
-│  Accuracy: 92.21%                                         │
-│  Macro AUC: 0.9861                                        │
+│  Accuracy: 92.21%                                          │
+│  Macro AUC: 0.9861                                         │
 └──────────────────────────┬─────────────────────────────────┘
                            │
                            ▼
 ┌────────────────────────────────────────────────────────────┐
-│                         PHASE 2                             │
+│                         PHASE 2                            │
 │                                                            │
-│  ResNet-18 → Edge Optimization → H.E.A.R.L. Router        │
+│  ResNet-18 → Edge Optimization → H.E.A.R.L. Router         │
 │                                                            │
 │  Quantization + Confidence + Cost + Latency                │
 │                    ↓                                       │
@@ -313,11 +313,11 @@ The complete research direction can therefore be summarized as:
                            │
                            ▼
 ┌────────────────────────────────────────────────────────────┐
-│                         PHASE 3                             │
+│                         PHASE 3                            │
 │                                                            │
 │  Policy-approved prediction → Gemini RAG Pipeline          │
 │                             ↓                              │
-│                   Structured Report                         │
+│                   Structured Report                        │
 │                                                            │
 │  Policy-blocked prediction → Human Review                  │
 └────────────────────────────────────────────────────────────┘
