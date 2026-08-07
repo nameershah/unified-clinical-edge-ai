@@ -12,8 +12,7 @@ The central principle is simple:
 
 Instead, the classifier produces a prediction and confidence score, after which H.E.A.R.L. evaluates the result against explicit routing constraints. High-confidence outputs can proceed toward a generative reporting pipeline, while insufficient-confidence outputs are blocked and escalated for human review.
 
-**Author:** Muhammad Nameer Shah  
-**Affiliation:** University of Agriculture Peshawar — BS Artificial Intelligence  
+**Author:** Muhammad Nameer Shah    
 **Contact:** [smns3960@gmail.com](mailto:smns3960@gmail.com)
 
 ---
