@@ -1,4 +1,3 @@
-```markdown
 # Unified Clinical Edge AI
 
 ### Deterministic Safety Architecture for Clinical AI on Edge Devices
@@ -580,4 +579,3 @@ GitHub.
 This project is licensed under the **Muhammad Nameer Shah Open Research License**.
 
 See [`LICENSE`](LICENSE) for the full terms.
-```
