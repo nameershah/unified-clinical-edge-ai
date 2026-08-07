@@ -1,3 +1,4 @@
+```markdown
 # Unified Clinical Edge AI
 
 ### Deterministic Safety Architecture for Clinical AI on Edge Devices
@@ -12,8 +13,8 @@ The central principle is simple:
 
 Instead, the classifier produces a prediction and confidence score, after which H.E.A.R.L. evaluates the result against explicit routing constraints. High-confidence outputs can proceed toward a generative reporting pipeline, while insufficient-confidence outputs are blocked and escalated for human review.
 
-**Author:** Muhammad Nameer Shah
-**Affiliation:** University of Agriculture Peshawar — BS Artificial Intelligence
+**Author:** Muhammad Nameer Shah  
+**Affiliation:** University of Agriculture Peshawar — BS Artificial Intelligence  
 **Contact:** [smns3960@gmail.com](mailto:smns3960@gmail.com)
 
 ---
@@ -150,15 +151,21 @@ The utility function provides an auditable policy score that can be used alongsi
 The routing boundary can enforce a minimum confidence requirement:
 
 $$
-\max_c P(y=c \mid x) \geq \tau
+\max_c P(y=c \mid x) \geq \tau_c
 $$
 
-where $\tau$ represents the configured safety threshold.
+where $\tau_c$ represents the configured confidence floor.
 
-For the current H.E.A.R.L. design, the default threshold is:
+For the current H.E.A.R.L. design, the default utility threshold is:
 
 $$
-\tau = 0.50
+\tau_U = 0.50
+$$
+
+with a confidence floor of:
+
+$$
+\tau_c = 0.60
 $$
 
 Conceptually:
@@ -171,8 +178,10 @@ Conceptually:
                            │
                            ▼
                   ┌────────────────┐
-                  │ Confidence >=  │
-                  │     0.85 ?     │
+                  │ Utility U(M)   │
+                  │   >= 0.50 ?    │
+                  │ Confidence     │
+                  │   >= 0.60 ?    │
                   └───────┬────────┘
                           │
                ┌──────────┴──────────┐
@@ -372,29 +381,31 @@ unified-clinical-edge-ai/
 └── README.md
 ```
 
+Model weights are hosted externally due to GitHub file-size limits (see Quickstart).
+
 ---
 
 # Experimental Artifacts
 
 ## Training Curves
 
-![Training Curves](training_curves.png)
+![Training Curves](https://raw.githubusercontent.com/nameershah/unified-clinical-edge-ai/main/training_curves.png)
 
 ## Confusion Matrix
 
-![Confusion Matrix](confusion_matrix.png)
+![Confusion Matrix](https://raw.githubusercontent.com/nameershah/unified-clinical-edge-ai/main/confusion_matrix.png)
 
 ## H.E.A.R.L. Routing Analysis
 
-![H.E.A.R.L. Routing Analysis](hearl_routing_analysis.png)
+![H.E.A.R.L. Routing Analysis](https://raw.githubusercontent.com/nameershah/unified-clinical-edge-ai/main/hearl_routing_analysis.png)
 
 ## Per-Class H.E.A.R.L. Decisions
 
-![H.E.A.R.L. Per-Class Decisions](hearl_per_class_decisions.png)
+![H.E.A.R.L. Per-Class Decisions](https://raw.githubusercontent.com/nameershah/unified-clinical-edge-ai/main/hearl_per_class_decisions.png)
 
 ## Latency Comparison
 
-![Latency Comparison](latency_comparison.png)
+![Latency Comparison](https://raw.githubusercontent.com/nameershah/unified-clinical-edge-ai/main/latency_comparison.png)
 
 ---
 
@@ -417,7 +428,15 @@ The baseline notebook uses the following core Python packages:
 pip install torch torchvision medmnist scikit-learn matplotlib seaborn
 ```
 
-## 3. Run the Baseline
+## 3. Download Model Weights
+
+Trained ResNet-18 PathMNIST weights are hosted externally (file size exceeds GitHub's upload limit):
+
+- [`resnet18_pathmnist_best.pth`](https://drive.google.com/file/d/14X0fdmEBoCaiPWKMvS-AQp2QNKWOSDAN/view?usp=sharing)
+
+Place the downloaded file in your working directory (or Colab runtime) before running Phase 2 / Phase 3 notebooks that load the checkpoint.
+
+## 4. Run the Baseline
 
 Open:
 
@@ -561,3 +580,4 @@ GitHub.
 This project is licensed under the **Muhammad Nameer Shah Open Research License**.
 
 See [`LICENSE`](LICENSE) for the full terms.
+```
