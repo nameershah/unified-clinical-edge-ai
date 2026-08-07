@@ -158,7 +158,7 @@ where $\tau$ represents the configured safety threshold.
 For the current H.E.A.R.L. design, the default threshold is:
 
 $$
-\tau = 0.85
+\tau = 0.50
 $$
 
 Conceptually:
